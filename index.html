@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Question Answering Demo</title>
+  <link rel="stylesheet" href="css/materialize.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"> </script>
+  <script src="index.js"></script>
+
+</head>
+<body>
+    <div class="card">
+      <div class="card-content">
+        <div class="row">
+          <div class="col s12">
+            <h1>Question Answering Demo</h1>
+            <span class="card-title">Input text:</span>
+            <div class="row">
+              <div class="input-field col s12 m8" style="height: 500px; overflow:scroll;">
+                <textarea id="text_inputtext" class="materialize-textarea" rows="10"></textarea>
+                <label for="text_inputtext">Input text</label>
+              </div>
+
+              <div class="col s12 m4">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="question_field" class="materialize-textarea" rows="10"></textarea>
+                    <label for="question_field">Enter your question:</label>
+                  </div>
+                  <div class="col s12">
+                    <button class="btn" onclick="readText()">Predict the answer</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12" id="div_wordcloud">
+            <h2>Predicted answer</h2>
+            <div class="row">
+              <div class="col s12" style="background-color:#ffffff;">
+                <div class="chart_wordcloud" id="predicted_answers"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/materialize.js" type="text/javascript"></script>
+  <script src="index.js"></script>
+
+</body>
+</html>
