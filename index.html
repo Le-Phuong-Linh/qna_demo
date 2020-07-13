@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Question Answering Demo</title>
   <link rel="stylesheet" href="css/materialize.css">
+  <link rel="stylesheet" href="css/styles.css">
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"> </script>
-  <script src="index.js"></script>
+  <script src="js/script.js"></script>
 
 </head>
 <body>
@@ -16,6 +17,7 @@
         <div class="row">
           <div class="col s12">
             <h1>Question Answering Demo</h1>
+            <span class="card-title">This demo runs a neural network that can find an answer to a user-supplied question in a given passage (text).</span>
             <span class="card-title">Input text:</span>
             <div class="row">
               <div class="input-field col s12 m8" style="height: 500px; overflow:scroll;">
@@ -36,22 +38,28 @@
               </div>
             </div>
           </div>
-          <div class="col s12" id="div_wordcloud">
-            <h2>Predicted answer</h2>
+          <div class="col s12" id="answers">
+            <h2>Predicted answers</h2>
             <div class="row">
               <div class="col s12" style="background-color:#ffffff;">
-                <div class="chart_wordcloud" id="predicted_answers"></div>
+                <div id="predicted_answers"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
+  <div class="histogram">
+    <h2>Histogram plot of confidence scores</h2>
+    <canvas width="500" height="500" id="canvas"></canvas>
   </div>
 
   <script src="js/materialize.js" type="text/javascript"></script>
-  <script src="index.js"></script>
+  <script src="js/script.js" type="text/javascript"></script>
+  <script src="js/canvas.js" type="text/javascript"></script>
+
 
 </body>
 </html>
